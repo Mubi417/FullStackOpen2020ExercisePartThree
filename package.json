@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "build:ui": "rm -rf build && cd \"../FullStackOpen2020/Part 2/2.6 - 2.11 & 2.15 - 2.20 the phonebook\" && npm run build --prod && cp -r build ../../../FullStackOpen2020ExercisePartThree",
     "deploy": "git push heroku master",
-    "deploy:full": "npm run build:ui && git add . && git commit -m 'New Front changes' && npm run deploy",
+    "deploy:full": "npm run build:ui && git add . && git commit -m 'New Frontend changes' && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "author": "El-Mubarak",
