@@ -12,7 +12,7 @@ const number = process.argv[4]
 const url = `mongodb+srv://kundominic:${password}@cluster0-ksr0k.mongodb.net/people?retryWrites=true&w=majority`
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
-    console.log("Database Connected Successfully")
+    console.log('Database Connected Successfully')
 }).catch((error)=>{
     console.log(error)
 })
@@ -26,9 +26,9 @@ const Person = mongoose.model('Persons', PersonSchema)
 
 if (process.argv.length === 3) {
     Person.find({}).then((person)=>{
-        console.log("phonebook:")
+        console.log('phonebook:')
         person.forEach((p) => {
-            console.log(p.name + " " + p.number)
+            console.log(p.name + ' ' + p.number)
         })
         mongoose.connection.close()
     })
@@ -38,8 +38,8 @@ if (process.argv.length === 3) {
         number: number
     })
     
-    person.save().then((result)=> {
-        console.log("saved successfully")
+    person.save().then(()=> {
+        console.log('saved successfully')
         mongoose.connection.close()
     })
 }
